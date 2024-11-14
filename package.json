@@ -13,23 +13,27 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "daily-diary-extension.openDiaryEntry",
-      "title": "Open Today's Diary"
-    }]
+    "commands": [
+      {
+        "command": "daily-diary-extension.openDiaryEntry",
+        "title": "Open Today's Diary"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
+    "package": "vsce package --allow-missing-repository --skip-license",
     "pretest": "npm run lint",
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.86.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
+    "@types/vscode": "^1.86.0",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "@vscode/vsce": "^3.2.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
   }
 }
